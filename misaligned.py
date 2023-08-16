@@ -13,7 +13,6 @@ def print_color_map():
 
 table_color_map_output = print_color_map()
 
-
-assert(table_color_map_output[0] ==  '0 | White | Blue')
-assert(table_color_map_output[12] == '12 | Black | Green')
+assert(table_color_map_output[0].strip() ==  '0 | White | Blue')
+assert(table_color_map_output[12].strip() == '12 | Black | Green')
 print("All is well (maybe!)\n")
