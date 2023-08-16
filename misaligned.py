@@ -5,16 +5,15 @@ def print_color_map():
     minor_colors = ["Blue", "Orange", "Green", "Brown", "Slate"]
     for i, major in enumerate(major_colors):
         for j, minor in enumerate(minor_colors):
-            print(f'{i * 5 + j} | {major} | {minor}')
-            color_map_output.append(f'{i * 5 + j} | {major} | {minor}')
-    #return len(major_colors) * len(minor_colors)
+            color_map_value = f'{(i * 5 + j):3} | {major} | {minor}'
+            print(color_map_value)
+            color_map_output.append(color_map_value)
     return color_map_output
 
 
-result = print_color_map()
-#print(result[0])
-#assert(result == 25)
+table_color_map_output = print_color_map()
 
-assert(result[0] ==  '0  | White | Blue')
-assert(result[12] == '12 | Black | Green')
+
+assert(table_color_map_output[0] ==  '0  | White | Blue')
+assert(table_color_map_output[12] == '12 | Black | Green')
 print("All is well (maybe!)\n")
